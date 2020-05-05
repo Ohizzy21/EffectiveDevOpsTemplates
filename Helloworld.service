@@ -1,0 +1,13 @@
+[Unit]
+Description=HelloWorld daemon service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=Simple
+Restart=always
+RestartSec=1
+ExecStart=/usr/bin/node /home/ubuntu/helloworld.js
+
+[Install]
+WantedBy=multi-user.target
